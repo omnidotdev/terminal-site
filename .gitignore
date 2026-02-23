@@ -1,0 +1,9 @@
+node_modules/
+.output/
+.tanstack/
+.nitro/
+dist/
+*.tsbuildinfo
+
+# environment
+.env*.local
