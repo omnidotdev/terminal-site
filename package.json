@@ -13,7 +13,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@omnidotdev/providers": "github:omnidotdev/providers#c24cfbc",
+    "@omnidotdev/providers": "github:omnidotdev/providers#ddc7829",
     "@radix-ui/react-slot": "^1.2.4",
     "@tanstack/react-query": "^5.90.16",
     "@tanstack/react-router": "^1.144.0",
