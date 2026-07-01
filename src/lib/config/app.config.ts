@@ -26,6 +26,11 @@ const app = {
     releases: "https://github.com/omnidotdev/terminal/releases",
     feedback: "https://backfeed.omni.dev/workspaces/omni/projects/terminal",
   },
+  // Legal links mirror the omni-api catalog SSOT
+  legal: {
+    privacy: "https://omni.dev/legal/privacy",
+    terms: "https://omni.dev/legal/terms",
+  },
   install: {
     macos: "brew install --cask omnidotdev/tap/omni-terminal",
     windows: "winget install Omni.Terminal",

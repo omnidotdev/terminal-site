@@ -36,6 +36,22 @@ const Footer = () => (
           Feedback
         </a>
         <a
+          href={app.legal.privacy}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
+        >
+          Privacy
+        </a>
+        <a
+          href={app.legal.terms}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
+        >
+          Terms
+        </a>
+        <a
           href={app.links.discord}
           target="_blank"
           rel="noopener noreferrer"
