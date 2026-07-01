@@ -52,6 +52,14 @@ const Footer = () => (
           Terms
         </a>
         <a
+          href={app.legal.cookies}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
+        >
+          Cookies
+        </a>
+        <a
           href={app.links.discord}
           target="_blank"
           rel="noopener noreferrer"
