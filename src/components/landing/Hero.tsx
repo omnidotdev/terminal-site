@@ -33,7 +33,7 @@ const Hero = () => (
       </svg>
 
       <span className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-medium text-primary text-sm">
-        Open Source &middot; MIT Licensed
+        Open Source &middot; Apache 2.0
       </span>
 
       <h1 className="max-w-3xl font-bold text-4xl tracking-tight md:text-6xl lg:text-7xl">
