@@ -1,69 +1,36 @@
+import { AppFooter } from "@omnidotdev/thornberry/app-footer";
 import { Github, MessageCircle } from "lucide-react";
 
 import app from "@/lib/config/app.config";
 
 /**
- * Landing page footer.
+ * Landing page footer. Renders the shared Omni `<AppFooter>`, which bakes in the
+ * "Made with <symbol> by Omni" credit, the omni.dev link, and the legal links so
+ * they can't drift. Terminal supplies only its catalog symbol, docs link, app
+ * nav links, and social block.
  */
 const Footer = () => (
-  <footer className="border-t px-6 py-10">
-    <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 sm:flex-row sm:justify-between">
-      <div className="flex items-center gap-2 text-muted-foreground text-sm">
-        <span>&copy; {new Date().getFullYear()}</span>
-        <a
-          href={app.organization.website}
-          className="transition-colors hover:text-foreground"
-        >
-          {app.organization.name}
-        </a>
-      </div>
-
-      <nav className="flex items-center gap-5">
-        <a
-          href={app.links.docs}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-        >
-          Docs
-        </a>
-        <a
-          href={app.links.feedback}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-        >
-          Feedback
-        </a>
-        <a
-          href={app.legal.privacy}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-        >
-          Privacy
-        </a>
-        <a
-          href={app.legal.terms}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-        >
-          Terms
-        </a>
-        <a
-          href={app.legal.cookies}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground text-sm transition-colors hover:text-foreground"
-        >
-          Cookies
-        </a>
+  <AppFooter
+    appSymbol={app.icon}
+    docsUrl={app.links.docs}
+    orgUrl={app.organization.url}
+    links={
+      <a
+        href={app.links.feedback}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded px-2 py-1 text-sm transition-colors hover:text-foreground"
+      >
+        Feedback
+      </a>
+    }
+    socials={
+      <>
         <a
           href={app.links.discord}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="transition-colors hover:text-foreground"
           aria-label="Discord"
         >
           <MessageCircle className="size-4" />
@@ -72,14 +39,31 @@ const Footer = () => (
           href={app.links.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground transition-colors hover:text-foreground"
+          className="transition-colors hover:text-foreground"
           aria-label="GitHub"
         >
           <Github className="size-4" />
         </a>
-      </nav>
-    </div>
-  </footer>
+        <a
+          href={app.links.threads}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-foreground"
+          aria-label="Threads"
+        >
+          <svg
+            role="img"
+            aria-label="Threads"
+            className="size-4"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z" />
+          </svg>
+        </a>
+      </>
+    }
+  />
 );
 
 export default Footer;
