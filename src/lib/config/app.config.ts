@@ -23,7 +23,7 @@ const app = {
     url: "https://omni.dev",
   },
   links: {
-    docs: "https://docs.omni.dev/armory/omni-terminal",
+    docs: "https://docs.omni.dev/products/omni-terminal",
     github: "https://github.com/omnidotdev/terminal",
     discord: "https://discord.gg/omnidotdev",
     threads: "https://www.threads.com/@omnidotdev",
