@@ -1,6 +1,6 @@
+import { Button } from "@omnidotdev/thornberry/button";
 import { BookOpen, Download, Github } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import app from "@/lib/config/app.config";
 
 /**
